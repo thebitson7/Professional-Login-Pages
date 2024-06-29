@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+    background-position: center;
+    background-size: cover;
+    color: #EEEEEE;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    backdrop-filter: blur(19px) saturate(184%);
+    -webkit-backdrop-filter: blur(19px) saturate(184%);
+    background-color: rgba(17, 25, 40, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #DC5F00;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 15px 10px 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #EEE;
+    color: #373A40;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    background-color: #FFF;
+    box-shadow: 0 0 0 2px #DC5F00;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-group {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #30cfd0;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none; /* Remove default outline */
+}
+
+.checkbox-group input[type="checkbox"]:checked:before {
+    content: "";
+    background-color: #30cfd0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    background-color: #DC5F00;
+    color: #EEE;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: calc(100% - 30px); /* اندازه‌گیری یکسان با تکست باکس‌ها با کاهش پدینگ */
+}
+
+.btn:hover {
+    background-color: #AF4700;
+}
+
+.additional-links {
+    margin-top: 10px;
+}
+
+.link {
+    color: #DC5F00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #AF4700;
+}
+
+.separator {
+    margin: 0 5px;
+    color: #EEE;
+}
