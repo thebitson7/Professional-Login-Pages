@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?fm=jpg&auto=format&fit=crop&w=3000&q=60');
+    background-position: center;
+    background-size: cover;
+    color: #EEEEEE;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #FF0000; /* رنگ قالب عنوان */
+}
+
+.group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: calc(100% - 40px);
+    padding: 12px;
+    padding-left: 40px; /* Padding for the text input */
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #373A40;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.input:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 2px #FFA27F; /* Shadow color on focus */
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #ff0000;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ff9900; /* Border color */
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.checkbox-group input[type="checkbox"]:checked:before {
+    content: "";
+    background-color: #97BE5A; /* Checkmark color */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn {
+    background-color: rgb(255, 0, 0); /* Button background color */
+    color: #EEE;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full-width button */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #AF4700;
+}
+
+.additional-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: #FF0000; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #AF4700;
+}
+
+.separator {
+    margin: 0 10px;
+    color: #EEE;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form>
+                <div class="group">
+                    <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path d="M12 2a10 10 0 110 20 10 10 0 010-20z" stroke-linejoin="round" stroke-linecap="round"></path>
+                        <path d="M9 12l2 2 4-4" stroke-linejoin="round" stroke-linecap="round"></path>
+                    </svg>
+                    <input class="input" type="text" placeholder="Username">
+                </div>
+                <div class="group">
+                    <svg stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" stroke-linejoin="round" stroke-linecap="round"></path>
+                    </svg>
+                    <input class="input" type="password" placeholder="Password">
+                </div>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Remember Me</label>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="additional-links">
+                    <a href="#" class="link">Forgot Password?</a>
+                    <span class="separator">|</span>
+                    <a href="#" class="link">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
